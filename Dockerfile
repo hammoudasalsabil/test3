@@ -1,6 +1,6 @@
 #image openjdk
 FROM openjdk:11
- ADD src/main/java/org/springframework/samples/petclinic/PetClinicApplication.jar src/main/java/org/springframework/samples/petclinic/PetClinicApplication.jar
+ ADD target/PetClinicApplication.jar PetClinicApplication.jar
  ENTRYPOINT ["java","-jar","PetClinicApplication.jar"]
  EXPOSE 8090
 
