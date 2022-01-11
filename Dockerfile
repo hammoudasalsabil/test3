@@ -3,9 +3,10 @@ FROM openjdk:11
  WORKDIR /home
  RUN git clone https://github.com/hammoudasalsabil/test3.git
  RUN chmod -R 777 test3
- RUN ./mvnw spring-boot:build-image
  WORKDIR /home/runner/work/test3/test3/target/
-#  ENTRYPOINT ["java","-jar","target/*.jar"]
+ ARG JAR_FILE=target/home/runner/work/test3/test3/target/PetClinicApplication.jar
+ ADD ${JAR_FILE} /home/runner/work/test3/test3/target/PetClinicApplication.jar
+ ENTRYPOINT ["java","-jar","target/*.jar"]
  EXPOSE 8090
 
  
