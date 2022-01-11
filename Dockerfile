@@ -4,6 +4,7 @@ FROM openjdk:11
  RUN git clone https://github.com/hammoudasalsabil/test3.git
  RUN chmod -R 777 test3
  WORKDIR /home/runner/work/test3/test3/target/
+ ENTRYPOINT ["java","-jar","target/*.jar"]
 #  RUN mvn clean
 #  RUN mvn install
 #  ADD test3/target/PetClinicApplication.jar test3/target/PetClinicApplication.jar
