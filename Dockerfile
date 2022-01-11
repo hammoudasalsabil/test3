@@ -1,11 +1,13 @@
 #image openjdk
 FROM openjdk:11
  RUN git clone https://github.com/hammoudasalsabil/test3.git
+ RUN chmod -R 777 test3
  RUN mvn clean
  RUN mvn install
- ADD target/PetClinicApplication.jar PetClinicApplication.jar
- ENTRYPOINT ["java","-jar","PetClinicApplication.jar"]
+#  ADD target/PetClinicApplication.jar PetClinicApplication.jar
+#  ENTRYPOINT ["java","-jar","PetClinicApplication.jar"]
  EXPOSE 8090
+ WORKDIR /home/test3/target
 
 #  ENTRYPOINT ["java", "PetClinicApplication"]
 
