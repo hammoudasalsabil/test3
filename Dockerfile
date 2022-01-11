@@ -4,7 +4,7 @@ FROM openjdk:11
  RUN git clone https://github.com/hammoudasalsabil/test3.git
  RUN chmod -R 777 test3
  WORKDIR /home/runner/work/test3/test3/target/
- ARG JAR_FILE=target/home/runner/work/test3/test3/target/PetClinicApplication.jar
+ ARG JAR_FILE=/home/runner/work/test3/test3/target/PetClinicApplication.jar
  ADD ${JAR_FILE} /home/runner/work/test3/test3/target/PetClinicApplication.jar
  ENTRYPOINT ["java","-jar","target/*.jar"]
  EXPOSE 8090
