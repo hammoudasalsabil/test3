@@ -128,7 +128,6 @@
           </execution>
         </executions>
       </plugin>
-      <finalName>PetClinicApplication</finalName>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -228,6 +227,7 @@
       </plugin>
 
     </plugins>
+    <finalName>PetClinicApplication</finalName>
   </build>
 
   <licenses>
