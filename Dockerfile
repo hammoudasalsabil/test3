@@ -3,10 +3,9 @@ FROM openjdk:11
  WORKDIR /home
  RUN git clone https://github.com/hammoudasalsabil/test3.git
  RUN chmod -R 777 test3
- RUN spring-petclinic
- RUN ./mvnw package
+ RUN ./mvnw spring-boot:build-image
  WORKDIR /home/runner/work/test3/test3/target/
- ENTRYPOINT ["java","-jar","target/*.jar"]
+#  ENTRYPOINT ["java","-jar","target/*.jar"]
  EXPOSE 8090
 
  
