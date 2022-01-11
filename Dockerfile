@@ -4,7 +4,7 @@ FROM openjdk:11
  RUN chmod -R 777 test3
 #  RUN mvn clean
  RUN mvn install
- ADD target/PetClinicApplication.jar PetClinicApplication.jar
+ ADD /home/runner/work/test3/test3/target/PetClinicApplication.jar /home/runner/work/test3/test3/target/PetClinicApplication.jar
  ENTRYPOINT ["java","-jar","PetClinicApplication.jar"]
  EXPOSE 8090
 #  WORKDIR /home/test3/target
