@@ -3,13 +3,13 @@ FROM openjdk:11
  WORKDIR /home
  RUN git clone https://github.com/hammoudasalsabil/test3.git
  RUN chmod -R 777 test3
- WORKDIR /home/runner/work/test3/test3
- RUN mvn clean
- RUN mvn install
+ WORKDIR /home/runner/work/test3/test3/target/
+#  RUN mvn clean
+#  RUN mvn install
 #  ADD test3/target/PetClinicApplication.jar test3/target/PetClinicApplication.jar
 
- WORKDIR /home/runner/work/test3/test3/target/PetClinicApplication.jar
- ENTRYPOINT ["java","-jar","PetClinicApplication.jar"]
+#  WORKDIR /home/runner/work/test3/test3/target/PetClinicApplication.jar
+#  ENTRYPOINT ["java","-jar","PetClinicApplication.jar"]
  EXPOSE 8090
 
 #  ENTRYPOINT ["java", "PetClinicApplication"]
