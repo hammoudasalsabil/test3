@@ -8,4 +8,4 @@ FROM openjdk:11
 # ENTRYPOINT ["java","-jar","/app.jar"]
 
 ARG DEPENDENCY=target/dependency
-ENTRYPOINT ["java","-cp","app:app/lib/*","petclinic.PetClinicApplication"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","src.main.java.org.springframework.samples.petclinic.PetClinicApplication"]
