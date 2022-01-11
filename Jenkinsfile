@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'docker build -t test3one .'
+                sh 'docker build -t test3.jar .'
             }
         }
         stage('Test') {
