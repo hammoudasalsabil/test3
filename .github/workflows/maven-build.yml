@@ -24,3 +24,12 @@ jobs:
           cache: maven
       - name: Build with Maven Wrapper
         run: ./mvnw -B package
+      - name: Build & push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
+          image: test3/test3
+          tags: v1, latest
+          registry: registry-url.io
+          dockerfile: Dockerfile
+
+   
