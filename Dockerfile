@@ -2,7 +2,7 @@
 FROM openjdk:11
   EXPOSE 8090
   RUN git clone https://github.com/hammoudasalsabil/test3.git
-  ADD test3/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java test3/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
+  ADD src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
   ENTRYPOINT ["java", "test3/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java"]
   
   
