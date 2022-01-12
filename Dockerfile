@@ -1,9 +1,16 @@
 #image openjdk
 FROM openjdk:11
   EXPOSE 8090
-  ARG JAR_FILE=/home/runner/work/test3/test3/target/PetClinicApplication.jar
-  COPY ${JAR_FILE} /home/runner/work/test3/test3/target/PetClinicApplication.jar
-  ENTRYPOINT ["java","-jar","/PetClinicApplication.jar"]
+  RUN git clone https://github.com/hammoudasalsabil/test3.git
+  ADD src.main.java.org.springframework.samples.petclinic.PetClinicApplication.java PetClinicApplication.java
+  RUN ["javac", "PetClinicApplication.java"]
+  ENTRYPOINT ["java", "PetClinicApplication"]
+  
+  
+  
+#   ARG JAR_FILE=/home/runner/work/test3/test3/target/PetClinicApplication.jar
+#   COPY ${JAR_FILE} /home/runner/work/test3/test3/target/PetClinicApplication.jar
+#   ENTRYPOINT ["java","-jar","/PetClinicApplication.jar"]
   
 
 
