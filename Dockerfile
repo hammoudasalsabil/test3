@@ -1,7 +1,8 @@
 #image openjdk
 FROM openjdk:11
   EXPOSE 8090
-  ADD home/runner/work/test3/test3/target/PetClinicApplication.jar PetClinicApplication.jar
+  ARG JAR_FILE=target/*.jar
+  COPY ${JAR_FILE} PetClinicApplication.jar
   ENTRYPOINT ["java","-jar","/PetClinicApplication.jar"]
   
 
