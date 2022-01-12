@@ -1,13 +1,23 @@
 #image openjdk
 FROM openjdk:11
- WORKDIR /home
- RUN git clone https://github.com/hammoudasalsabil/test3.git
- RUN chmod -R 777 test3
- WORKDIR /home/runner/work/test3/test3/target/
- ARG JAR_FILE=/home/runner/work/test3/test3/target/PetClinicApplication.jar
- ADD ${JAR_FILE} /home/runner/work/test3/test3/target/PetClinicApplication.jar
- ENTRYPOINT ["java","-jar","target/*.jar"]
- EXPOSE 8090
+  EXPOSE 8090
+  ADD home/runner/work/test3/test3/target/PetClinicApplication.jar PetClinicApplication.jar
+  ENTRYPOINT ["java","-jar","/PetClinicApplication.jar"]
+  
+
+
+
+
+
+
+#  WORKDIR /home
+#  RUN git clone https://github.com/hammoudasalsabil/test3.git
+#  RUN chmod -R 777 test3
+#  WORKDIR /home/runner/work/test3/test3/target/
+#  ARG JAR_FILE=/home/runner/work/test3/test3/target/PetClinicApplication.jar
+#  ADD ${JAR_FILE} /home/runner/work/test3/test3/target/PetClinicApplication.jar
+#  ENTRYPOINT ["java","-jar","target/*.jar"]
+#  EXPOSE 8090
 
  
  
