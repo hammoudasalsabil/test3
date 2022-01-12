@@ -3,7 +3,7 @@ FROM openjdk:11
   EXPOSE 8090
   RUN git clone https://github.com/hammoudasalsabil/test3.git
   ADD src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java 
-  RUN ["javac", "PetClinicApplication.java"]
+  RUN ["javac", "src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java"]
   ENTRYPOINT ["java", "PetClinicApplication"]
   
   
